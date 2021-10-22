@@ -31,7 +31,7 @@ namespace BuyItTo.DB
     /// <summary>
     /// Configure product category mapping to database
     /// </summary>
-    public sealed class ProductCategoryMapping : EntityTypeConfiguration<Product>
+    public sealed class ProductCategoryMapping : EntityTypeConfiguration<ProductCategory>
     {
         public ProductCategoryMapping()
         {

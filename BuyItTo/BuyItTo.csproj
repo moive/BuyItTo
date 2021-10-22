@@ -119,6 +119,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110220326171_Initial.cs" />
+    <Compile Include="Migrations\202110220326171_Initial.designer.cs">
+      <DependentUpon>202110220326171_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Customers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110220326171_Initial.resx">
+      <DependentUpon>202110220326171_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
