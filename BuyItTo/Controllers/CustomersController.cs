@@ -24,7 +24,7 @@ namespace BuyItTo.Controllers
                 Customers = _queryService.GetCustomerList()
             };
 
-            return View();
+            return View("CustomerList", model);
         }
     }
 }
