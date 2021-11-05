@@ -133,6 +133,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Head.cshtml" />
     <Content Include="Views\web.config" />
+    <Content Include="Views\Shared\NavHeader.cshtml" />
+    <Content Include="Views\Customers\CustomerList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,9 +142,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Customers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110220326171_Initial.resx">
       <DependentUpon>202110220326171_Initial.cs</DependentUpon>
