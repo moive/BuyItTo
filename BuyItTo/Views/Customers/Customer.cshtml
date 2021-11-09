@@ -1,0 +1,69 @@
+﻿@model BuyItTo.ViewModels.CustomerDTO
+@{
+    ViewBag.Title = "Customer";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="my-5">
+    <h4 class="mb-4">Customer DTO</h4>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.address, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.invoiceAddress, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.invoiceAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.invoiceAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.shippingAddress, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.shippingAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.shippingAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.phone, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "col-form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <div class="mb-3">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+}
